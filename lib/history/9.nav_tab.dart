@@ -35,13 +35,10 @@ class _CategoryPageState extends State<CategoryPage> {
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {},
               ),
-              iconTheme: IconThemeData(
-                color: HexColor('#333333'), //修改颜色
-              ),
               title: Container(
                 color: HexColor('#f2f2f2f2'),
                 padding: EdgeInsets.fromLTRB(0, 4, 0, 4),
-                width:  220.0,
+                width: 170.0,
                 height: 38.0,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -49,27 +46,26 @@ class _CategoryPageState extends State<CategoryPage> {
                     Expanded(
                       child: Container(
                           //  decoration: BoxDecoration(color: Colors.red),
-                          child: Center(
+                        child: Center(
                         child: TabBar(
                           // indicatorWeight: 10,
                           isScrollable: true, //多个Tab的时候，可以实现滑动和联动
                           // indicatorColor:Colors.blue,
                           indicator: BoxDecoration(
-                            color: Colors.white,
-                          ),
-                          // borderRadius: BorderRadius.all(Radius.circular(15))),
+                              color: Colors.white,),
+                              // borderRadius: BorderRadius.all(Radius.circular(15))),
                           labelColor: Colors.blue,
-                          labelPadding: EdgeInsets.only(left: 0, right: 0),
+                          // labelPadding: EdgeInsets.only(left: 20),
                           unselectedLabelColor: HexColor('#6B7389'),
                           indicatorSize: TabBarIndicatorSize.label,
                           tabs: <Widget>[
                             Container(
                               // color: Colors.yellow,
-                               width: 108,
                               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                              child: Center(
-                                child: 
+                              child: Row(
+                                children: <Widget>[
                                   Tab(text: "当前持仓"),
+                                ],
                               ),
                               // margin: EdgeInsets.only(top: 50.0, left: 120.0), //容器外填充
                               // constraints: BoxConstraints.tightFor(width: 100.0), //卡片大小
@@ -88,16 +84,15 @@ class _CategoryPageState extends State<CategoryPage> {
                               //     ]),
                               // child: Tab(text: '推荐'),
                             ),
-                            Container(
+                          Container(
                               // color: Colors.yellow,
-                              width: 108,
                               padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
-                              child: Center(
-                                child: 
+                              child: Row(
+                                children: <Widget>[
                                   Tab(text: "当前资产"),
-                                
+                                ],
                               ),
-                            )
+                          )
                             // Tab(text: "当前资产"),
                             // Tab(text: "推荐"),
                             // Tab(text: "推荐"),
